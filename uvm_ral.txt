@@ -1,0 +1,36 @@
+###################################################################################################################
+#---------------------------------------------------UVM RAL-------------------------------------------------------#
+###################################################################################################################
+
+Introduction to RAL
+
+    - What is Front Door and Back Door
+    - Types of Prediction
+    - Register and Memory classes in RAL
+
+
+     - For Register we have shadow values : Desired and Mirrored Value
+     - For Memory we don't have shadow values
+
+       o Desired Values :- What we want in hardware register in next   -- Both are updated by Predictior at the  
+       o Mirror Values  :- What we think in the hardware register now  -- end of front door write and read access
+
+
+#----------------Register Model--------------#
+
+    Has 7 Building block classes
+
+    NAME            |    BASE CLASS
+    _____________________________________
+                    |
+   register         |    uvm_reg
+   register_field   |    uvm_reg_field
+   register_file    |    uvm_reg_file
+   memory           |    uvm_mem
+   register_map     |    uvm_map
+   register_block   |    uvm_reg_block 
+
+
+  o Map has offset address of all registers & memories + Pointer for adapter & sequencer
+
+
